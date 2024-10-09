@@ -1,0 +1,124 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOLOv8 Image Prediction</title>
+</head>
+<body>
+    <h1>Upload an Image for YOLOv8 Prediction</h1>
+    
+    <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if result_image %}
+    <h2>Prediction Result:</h2>
+    <img src="{{ result_image }}" alt="Predicted Image" width="500">
+{% elif error %}
+    <h2>{{ error }}</h2>
+{% endif %}
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOLOv8 Image Prediction</title>
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .image-container img {
+            max-width: 70%;  /* Increase the max-width to 70% */
+            height: auto;    /* Maintain aspect ratio */
+            border: 2px solid #ccc; /* Optional: Add a border for better visibility */
+            border-radius: 10px; /* Optional: Add rounded corners */
+        }
+        h3 {
+            text-align: center; /* Center align the headings */
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload an Image for YOLOv8 Prediction</h1>
+    
+    <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if input_image and result_image %}
+        <h2>Prediction Result:</h2>
+        <div class="image-container">
+            <div>
+                <h3>Input Image:</h3>
+                <img src="{{ input_image }}" alt="Input Image">
+            </div>
+            <div>
+                <h3>Output Image:</h3>
+                <img src="{{ result_image }}" alt="Output Image">
+            </div>
+        </div>
+    {% elif error %}
+        <h2>{{ error }}</h2>
+    {% endif %}
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOLOv8 Image Prediction</title>
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .image-container img {
+            max-width: 90%;  /* Increase the max-width to 90% */
+            height: auto;    /* Maintain aspect ratio */
+            border: 2px solid #ccc; /* Optional: Add a border for better visibility */
+            border-radius: 10px; /* Optional: Add rounded corners */
+        }
+        h3 {
+            text-align: center; /* Center align the headings */
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload an Image for YOLOv8 Prediction</h1>
+    
+    <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if input_image and result_image %}
+        <h2>Prediction Result:</h2>
+        <div class="image-container">
+            <div>
+                <h3>Input Image:</h3>
+                <img src="{{ input_image }}" alt="Input Image">
+            </div>
+            <div>
+                <h3>Output Image:</h3>
+                <img src="{{ result_image }}" alt="Output Image">
+            </div>
+        </div>
+    {% elif error %}
+        <h2>{{ error }}</h2>
+    {% endif %}
+</body>
+</html>
