@@ -133,8 +133,8 @@ from werkzeug.utils import secure_filename
 import cv2
 import numpy as np
 from PIL import Image
-import time
-import random
+# import time
+# import random
 
 # Initialize Flask app
 app = Flask(__name__)
